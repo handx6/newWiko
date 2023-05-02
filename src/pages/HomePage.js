@@ -52,7 +52,7 @@ export default function HomePage() {
       </section>
       <section className="md:flex md:space-x-10 bg-main pt-10 pb-20 px-10 text-white justify-center">
         <div className="md:w-1/2 max-w-lg">
-          <h2 className="w-full text-white text-3xl font-light">
+          <h2 className="w-full text-white text-[1.75rem] font-extralight">
             Égalité Hommes-Femmes, on en parle?
           </h2>
           <hr className="mt-2 mb-4" />

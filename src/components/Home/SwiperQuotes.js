@@ -14,19 +14,22 @@ import CardQuotes from "../Card/CardQuotes";
 
 export default function SwiperQuotes() {
   const [my_swiper, set_my_swiper] = useState({});
+  function handleSlideChange(swiperCore) {
+    swiperCore.slideNext();
+  }
   return (
     <>
       <div className="flex justify-between items-center">
-        <h2 className="w-full text-white text-3xl font-light mx-w-md">
-          Citations Presse
+        <h2 className="w-full text-white text-[1.75rem] font-extralight mx-w-md">
+          Citations presse
         </h2>
         <div className="flex space-x-4 text-white">
           <i
-            className="fa fa-angle-left fa-2x"
+            className="fa fa-angle-left text-2xl"
             onClick={() => my_swiper.slidePrev()}
           />
           <i
-            className="fa fa-angle-right fa-2x"
+            className="fa fa-angle-right  text-2xl"
             onClick={() => my_swiper.slideNext()}
           />
         </div>
@@ -38,12 +41,18 @@ export default function SwiperQuotes() {
         onInit={(ev) => {
           set_my_swiper(ev);
         }}
+        scrollbar={{ draggable: true }}
+        speed={1000}
         spaceBetween={50}
         slidesPerView={1}
+        effect="fade"
         loop={true}
         autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
+          delay: 5000,
+          disableOnInteraction: true,
+        }}
+        fadeEffect={{
+          crossFade: true, // enables slides to cross fade
         }}
       >
         <SwiperSlide>
