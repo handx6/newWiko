@@ -1,5 +1,4 @@
 import React from "react";
-import Navigation from "../components/Layouts/Navigation";
 import { dataInfo } from "../data/dataPro";
 import CardPro from "../components/Card/CardPro";
 

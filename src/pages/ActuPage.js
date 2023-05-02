@@ -20,9 +20,9 @@ export default function ActuPage() {
               fill="currentColor"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10 12a1 1 0 01-.7-.3l-4.6-4.6A1 1 0 015.3 6h9.4a1 1 0 01.7 1.7l-4.6 4.6a1 1 0 01-.7.3z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
             {isMenuOpen && (
