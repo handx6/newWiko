@@ -14,9 +14,7 @@ import CardQuotes from "../Card/CardQuotes";
 
 export default function SwiperQuotes() {
   const [my_swiper, set_my_swiper] = useState({});
-  function handleSlideChange(swiperCore) {
-    swiperCore.slideNext();
-  }
+ 
   return (
     <>
       <div className="flex justify-between items-center">
@@ -41,7 +39,6 @@ export default function SwiperQuotes() {
         onInit={(ev) => {
           set_my_swiper(ev);
         }}
-        scrollbar={{ draggable: true }}
         speed={1000}
         spaceBetween={50}
         slidesPerView={1}
