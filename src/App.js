@@ -40,7 +40,6 @@ function App() {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
- console.log(windowSize)
   return (
     <Router>
       <Layout>

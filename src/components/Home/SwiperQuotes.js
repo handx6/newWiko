@@ -9,28 +9,29 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 
-import { GrNext, GrPrevious } from "react-icons/gr";
-export default function SwiperQuotes() {
-    const [my_swiper, set_my_swiper] = useState({});
+import { dataQuotes } from "../../data/dataHome";
+import CardQuotes from "../Card/CardQuotes";
 
+export default function SwiperQuotes() {
+  const [my_swiper, set_my_swiper] = useState({});
   return (
     <>
       <div className="flex justify-between items-center">
         <h2 className="w-full text-white text-3xl font-light mx-w-md">
-          Citations
+          Citations Presse
         </h2>
         <div className="flex space-x-4 text-white">
-          <GrPrevious
-            className=""
+          <i
+            className="fa fa-angle-left fa-2x"
             onClick={() => my_swiper.slidePrev()}
           />
-          <GrNext
-            className=""
+          <i
+            className="fa fa-angle-right fa-2x"
             onClick={() => my_swiper.slideNext()}
           />
         </div>
       </div>
-      <hr className="mt-2" />
+      <hr className="mt-2 mb-4" />
       <Swiper
         // install Swiper modules
         modules={[Autoplay, EffectFade]}
@@ -46,32 +47,32 @@ export default function SwiperQuotes() {
         }}
       >
         <SwiperSlide>
-          <blockquote className="text-white">
-            View4 : « un téléphone à petit prix, mais doté de maxi prestations »
-            « Design et performances ont tous deux été soignés »
-            <br />
-            <a
-              className="text-black underline italic"
-              href="https://www.cnetfrance.fr/bon-plan/bon-plan-le-nouveau-wiko-view-4-a-169-euros-avec-coque-et-protection-d-ecran-offertes-39900215.htm"
-              target="_blank"
-            >
-              LIRE LA SUITE
-            </a>
-          </blockquote>
+          <CardQuotes
+            text={dataQuotes[0].text}
+            link={dataQuotes[0].link}
+            source={dataQuotes[0].source}
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <blockquote className="text-white">
-            Wiko Power U10, Power U20 et Power U30 : l'autonomie comme arme de
-            guerre.
-            <br />
-            <a
-              className="text-black underline italic"
-              target="_blank"
-              href="https://www.frandroid.com/marques/wiko/906575_wiko-power-u10-power-u20-et-power-u30-officialisation"
-            >
-              LIRE LA SUITE
-            </a>
-          </blockquote>
+          <CardQuotes
+            text={dataQuotes[1].text}
+            link={dataQuotes[1].link}
+            source={dataQuotes[1].source}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardQuotes
+            text={dataQuotes[2].text}
+            link={dataQuotes[2].link}
+            source={dataQuotes[2].source}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardQuotes
+            text={dataQuotes[3].text}
+            link={dataQuotes[3].link}
+            source={dataQuotes[3].source}
+          />
         </SwiperSlide>
       </Swiper>
     </>

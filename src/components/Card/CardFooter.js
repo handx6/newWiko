@@ -31,7 +31,7 @@ import { Link } from "react-router-dom";
    export default function CardFooter({ item }) {
    return (
      <div className="mx-auto">
-       <div className="flex-row justify-between w-full items-center mx-5 my-5 ">
+       <div className="flex-row justify-between max-w-[8rem] items-center mx-5 my-5 ">
          <h3
            className="w-full font-bold text-[#838383] lg:w-[10rem] text-left text-md lg:max-w-sm"
            style={{
@@ -45,7 +45,7 @@ import { Link } from "react-router-dom";
 
          <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-0">
            {item.subtitles.map((par, index) => (
-             <Link to={par.url}>
+             <Link key={index} to={par.url}>
                <p className="max-w-lg leading-normal text-sm font-light  text-white ">
                  {par.subtitle}
                </p>

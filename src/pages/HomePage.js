@@ -55,18 +55,19 @@ export default function HomePage() {
           <h2 className="w-full text-white text-3xl font-light">
             Égalité Hommes-Femmes, on en parle?
           </h2>
-          <hr className="mt-2" />
+          <hr className="mt-2 mb-4" />
           <div className="flex mt-2 items-center space-x-2">
-            <p className="text-6xl font-light">92</p>
-            <p className="text-sm">
-              C'est la note finale que nous avons obtenue.<br/> Chez WIKO, l'égalité
-              professionnelle entre les hommes et les femmes est essentielle !<br/>
+            <p className="text-6xl font-extralight">92</p>
+            <p className="text-sm font-extralight">
+              C'est la note finale que nous avons obtenue.
+              <br /> Chez WIKO, l'égalité professionnelle entre les hommes et
+              les femmes est essentielle !<br />
               note sur un total de 100
             </p>
           </div>
         </div>
         <div className="md:w-1/2 max-w-lg">
-          <SwiperQuotes/>
+          <SwiperQuotes />
         </div>
       </section>
     </>

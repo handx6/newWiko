@@ -66,14 +66,14 @@ export default function ProPage() {
           processus de transformation digitale complet sera assurément vecteur
           d'opportunités pour vos entreprises.
         </p>
-        <div className="pt-20 md:flex md:p-20 lg:p-30">
+        <div className="pt-20 md:flex md:p-20  md:items-start">
           {dataInfo.map((item, index) => (
             <CardPro key={index} card={item} />
           ))}
         </div>
       </section>
       <section>
-        <div className=" md:mx-10 max-w-[570px] mx-auto bg-[#F8F9FA] md:w-full md:max-w-3/4">
+        <div className=" md:mx-20  mx-auto bg-[#F8F9FA] lg:max-w-3/4 flex flex-col items-center">
           <h3 className="mt-10 pb-4 text-2xl font-medium text-center">
             Présentez-nous votre projet !
           </h3>
@@ -183,6 +183,9 @@ export default function ProPage() {
                 id="message"
                 name="message"
               />
+            </div>
+            <div className="py-4 flex justify-center">
+              <input type="submit" className="bg-transparent border hover:text-white hover:bg-gray-500 hover border-gray-500 rounded-md text-gray-500 text-md font-semibold px-4 py-2" value="ENVOYER"/>
             </div>
           </form>
         </div>

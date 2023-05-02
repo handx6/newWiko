@@ -43,14 +43,14 @@ export default function Footer() {
         </ul>
       </div>
       <div className="w-full mx-auto">
-        <div className=" mx-auto max-w-lg justify-center  flex">
+        <div className="mx-auto max-w-lg justify-center  flex">
           <div className="lg:flex flex-row justify-center  py-3 ">
-            {dataFooter.map((item) => (
-              <CardFooter item={item} />
+            {dataFooter.map((item, index) => (
+              <CardFooter key={index} item={item} />
             ))}
           </div>
         </div>
-        <div className="lg: flex flex-wrap justify-center pt-3 py-8">
+        <div className=" flex flex-wrap justify-center pt-3 py-8">
           <img
             src={`${logo}`}
             alt="logo"

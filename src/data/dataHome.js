@@ -48,3 +48,26 @@ export const dataTel = [
     urlImgInfos: "img/tels/y62Infos.png",
   },
 ];
+
+export const dataQuotes = [
+  {
+    text: "une belle batterie interne avec un emplacement chargé à 5000 mAhLe smartphone View4 « vous offre 3 jours d’utilisation garanti avec une certification du laboratoire indépendant Smartviser",
+    link: "https://actu.meilleurmobile.com/wiko-devoile-les-view-4-et-view-4-lite-entre-modernite-et-continuite_203943",
+    source: "Meilleurmobile.com",
+  },
+  {
+    text: "View4 : un téléphone à petit prix, mais doté de maxi prestations Design et performances ont tous deux été soignés",
+    link: "https://www.cnetfrance.fr/bon-plan/bon-plan-le-nouveau-wiko-view-4-a-169-euros-avec-coque-et-protection-d-ecran-offertes-39900215.htm",
+    source: "Cnet",
+  },
+  {
+    text: "Wiko View4 et View4 Lite : deux nouveaux smartphones endurants",
+    link: "https://www.journaldugeek.com/2020/02/20/wiko-view-4-lite-nouveaux-smartphones-endurants/",
+    source: "Journal du Geek",
+  },
+  {
+    text: "Classement DXOMARK : Lorsqu'on parle d'autonomie, c'est le Wiko Power U30 qui apparaît en tête grâce à une autonomie en usage classique allant jusqu'à 80 heures.",
+    link: "https://www.frandroid.com/produits-android/smartphone/936405_autonomie-des-smartphones-dxomark-devoile-la-liste-des-meilleurs-eleves",
+    source: "FRandroid",
+  },
+];
