@@ -6,7 +6,7 @@ export default function ActuPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <div className="bg-[#00b2a9] py-10  mx-auto justify-center items-center w-full">
+      <div className="bg-[#00b2a9] py-10 px-4 mx-auto justify-center items-center w-full">
         <div className="flex justify-between items-center mt-5 mb-5  w-[100%] max-w-[1260px] mx-auto border-white border-b-2 ">
           <h1 className="font-normal text-white text-[2.5rem]">Actualités</h1>
           <div className="flex justify-between items-center">

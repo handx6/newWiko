@@ -15,6 +15,7 @@ import ProPage from "./pages/ProPage";
 import Layout from "./components/Layouts/Layout";
 import ActuDetailsPage from "./pages/ActuDetailsPage";
 import FaqPage from "./pages/FaqPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function getWindowSize() {
   return {
@@ -45,26 +46,27 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route
+          {/* <Route
             path="/shop/mobiles/smartphones"
             element={<SmartphonesPage />}
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/shop/mobiles/telephones-portables"
             element={<TelPage />}
-          />
-          <Route path="/shop/accessoires" element={<AccessoiresPage />} />
-          <Route path="/shop/objets-connectes" element={<ObjConPage />} />
-          <Route path="/shop/conseils-pratiques" element={<ConseilsPage />} />
-          <Route path="/shop/assistance-wiko" element={<AssistPage />} />
-          <Route
+          /> */}
+          {/* <Route path="/shop/accessoires" element={<AccessoiresPage />} /> */}
+          {/* <Route path="/shop/objets-connectes" element={<ObjConPage />} /> */}
+          {/* <Route path="/shop/conseils-pratiques" element={<ConseilsPage />} /> */}
+          {/* <Route path="/shop/assistance-wiko" element={<AssistPage />} /> */}
+          {/* <Route
             path="/shop/assistance-produit-wiko"
             element={<AssistProdPage />}
-          />
+          /> */}
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/actualites/" element={<ActuPage />} />
           <Route path="/actualites/:id" element={<ActuDetailsPage />} />
           <Route path="/professionnels" element={<ProPage />} />
+          <Route path="/*" element={<ErrorPage/>} />
         </Routes>
       </Layout>
     </Router>

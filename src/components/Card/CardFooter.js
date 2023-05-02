@@ -31,7 +31,7 @@ import { Link } from "react-router-dom";
    export default function CardFooter({ item }) {
    return (
      <div className="mx-auto">
-       <div className="flex-row justify-between max-w-[8rem] items-center mx-5 my-5 ">
+       <div className="flex-row justify-between lg:max-w-[8rem] items-center mx-5 my-5 ">
          <h3
            className="w-full font-bold text-[#838383] lg:w-[10rem] text-left text-md lg:max-w-sm"
            style={{

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
-
+import MenuBurger from "./MenuBurger";
 export default function Navigation() {
   // gère le changement de logo
   const [isBlack, setIsBlack] = useState(false);
@@ -10,10 +10,12 @@ export default function Navigation() {
   const [showProduct, setShowProduct] = useState(false);
   const [showAssist, setShowAssist] = useState(false);
   const [bgNav, setBgNav] = useState("bg-transparent text-white");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="absolute w-full z-50">
       <nav
-        className={`hover:bg-white hover:text-black py-[0.5rem] px-[1rem] w-full flex justify-between items-center ${bgNav}`}
+        className={`lg:hover:bg-white lg:hover:text-black sm:hover:bg-transparent sm:hover:text-white py-[0.5rem] px-[1rem] w-full flex justify-between items-center ${bgNav}`}
         onMouseEnter={() => {
           setIsBlack(true);
           setBgNav("bg-white text-black");
@@ -28,20 +30,20 @@ export default function Navigation() {
           <div className="">
             {isBlack ? (
               <img
-                src="img/wiko-logo-black.svg"
+                src="../../img/wiko-logo-black.svg"
                 alt="Wiko black logo"
                 className="w-[6.3rem] max-h-[40px] "
               />
             ) : (
               <img
-                src="img/wiko-logo-white.svg"
+                src="../../img/wiko-logo-white.svg"
                 alt="Wiko white logo"
                 className="w-[6.3rem] max-h-[40px] "
               />
             )}
           </div>
         </Link>
-        <ul className="flex justify-between space-x-6">
+        <ul className="lg:flex justify-between space-x-6 hidden ">
           <li
             className="font-semibold hover:font-bold"
             onMouseEnter={() => {
@@ -82,7 +84,7 @@ export default function Navigation() {
             <Link to="/professionnels">Professionnels</Link>
           </li>
         </ul>
-        <ul className="flex space-x-3 text-xl">
+        <ul className="lg:flex hidden space-x-3 text-xl">
           <li>
             <RiShoppingBasketLine />
           </li>
@@ -94,6 +96,8 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
+      <MenuBurger isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+
       {showProduct && (
         <div
           className="bubble z-60"
@@ -134,7 +138,8 @@ export default function Navigation() {
         </div>
       )}
       {showAssist && (
-        <div onMouseEnter={() => {
+        <div
+          onMouseEnter={() => {
             setShowAssist(true);
             setIsBlack(true);
             setBgNav("bg-white text-black");
