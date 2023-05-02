@@ -3,7 +3,7 @@ export function CardActu({ id, image, title, date, subtitle, description }) {
   return (
     <Link to={`/actualites/${id}`}>
       <div
-        className=" rounded-md bg-white shadow-md  flex flex-col gap-1 w-full md:max-w-lg mx-auto "
+        className=" rounded-md bg-white shadow-md max-w-full  flex flex-col gap-1 w-full md:max-w-lg mx-auto "
         style={{ width: "100%", height: "100%" }}
       >
         <img src={image} alt={title} style={{ width: "100%" }} />
@@ -13,9 +13,9 @@ export function CardActu({ id, image, title, date, subtitle, description }) {
             <p className="text-gray-500 font-bold text-sm">{date}</p>
           </div>
 
-          <h2 className="font-bold text-3xl ">{subtitle}</h2>
+          <h2 className="font-bold text-2xl text-black pb-2">{subtitle}</h2>
 
-          <p className="text-sm text-gray-500 ">{description}</p>
+          <p className="text-sm text-gray-500 pb-6 font-light">{description}</p>
         </div>
       </div>
     </Link>
